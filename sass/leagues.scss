@@ -1,0 +1,893 @@
+@use './colors' as *;
+
+.results {
+    .heading {
+        margin-top: 100px;
+        height: 250px;
+        border-radius: 20px 20px 0 0;
+        display: flex;
+        align-items: center;
+        background-color: $white-color;
+
+        img {
+            margin-left: 20px;
+            width: 250px;
+            height: auto;
+            mix-blend-mode: multiply;
+            border: 1px solid #d5d5d5;
+            border-radius: 20px;
+        }
+
+        .heading_container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .heading_name {
+                font-size: 25px;
+                font-weight: bold;
+            }
+
+            .heading_season {
+                font-size: 15px;
+                color: grey;
+            }
+        }
+    }
+
+    .links-section {
+        background-color: $white-color;
+        display: inline-flex;
+        height: 30px;
+        border-radius: 0 0 20px 20px;
+
+        a {
+            color: rgb(116, 116, 116);
+            margin: 7px 20px 7px;
+            text-transform: uppercase;
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 2px;
+            font-size: 12px;
+        }
+
+        a:hover {
+            color: black;
+        }
+    }
+
+    .section {
+        background-color: $white-color;
+        border-radius: 15px 15px 0 0;
+        display: flex;
+        margin-top: 20px;
+
+        .matchday-info {
+            align-items: center;
+            background-color: $second-color;
+            display: flex;
+            padding-left: 10px;
+            border-radius: 5px;
+            letter-spacing: 1px;
+            font-size: 13px;
+            height: 30px;
+        }
+
+        .matches_list {
+            list-style-type: none;
+            margin-top: 10px;
+            margin-left: 20px;
+
+            p {
+                margin-top: 10px;
+                font-weight: bold;
+            }
+
+            .match {
+                display: flex;
+                flex-direction: row;
+                /* Układ poziomy */
+                align-items: center;
+                width: 100%;
+                padding-bottom: 5px;
+            }
+
+            .match-date {
+                width: 100px;
+                font-size: 13px;
+                color: #555;
+                margin-right: 20px;
+            }
+
+            .team_container {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                width: 100%;
+
+                a {
+                    color: black;
+                    text-decoration: none;
+                }
+
+                a:hover {
+                    color: red;
+                }
+            }
+
+            .team {
+                display: flex;
+                align-items: center;
+                width: 100%;
+            }
+
+            .team-logo {
+                width: 25px;
+                height: auto;
+                margin: 5px 5px;
+            }
+
+            .winner {
+                font-weight: bold;
+            }
+
+            .score {
+                font-size: 15px;
+                margin-left: auto;
+                align-self: flex-end;
+            }
+
+            .more_games {
+                width: 100%;
+
+                a {
+                    color: black;
+                }
+
+                p {
+                    text-align: center;
+
+                }
+            }
+        }
+    }
+
+    .table_choice {
+        height: 50px;
+
+        button {
+            background-color: $second-color;
+            color: black;
+            margin: 12px 0 0 20px;
+            text-transform: uppercase;
+            font-size: 10px;
+            letter-spacing: 1px;
+            border: 6px;
+        }
+    }
+
+    .table_section {
+        background-color: $second-color;
+        margin-top: 5px;
+        display: inline-flex;
+        height: 40px;
+
+        p {
+            padding-left: 30px;
+            margin-top: 10px;
+
+            text-transform: uppercase;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+        }
+
+        p:nth-child(2) {
+            margin-left: 5px;
+            padding-right: 180px;
+        }
+
+        p:nth-of-type(8) {
+            padding-left: 40px;
+        }
+
+        p:nth-of-type(10) {
+            padding-left: 50px;
+        }
+    }
+
+    .table_info {
+        .standing_info {
+
+            background-color: $white-color;
+            list-style-type: none;
+
+            a {
+                color: black;
+                /* Ustawia czarny kolor dla linków */
+                text-decoration: none;
+                /* Usuwa podkreślenie */
+            }
+
+            a:hover {
+                color: red;
+            }
+
+            div:nth-of-type(n+4):nth-of-type(-n+6) {
+                width: 46px;
+                text-align: center;
+            }
+
+            div:nth-of-type(4) {
+                padding-left: 17px;
+            }
+
+
+            .table_container {
+                display: flex;
+                height: 45px;
+                flex-direction: row;
+                align-items: center;
+                width: 100%;
+                margin-right: 20px;
+
+                .position {
+                    width: 22px;
+                    height: 22px;
+                    border-radius: 3px;
+                    margin-left: 25px;
+
+                    text-align: center;
+                    justify-content: center;
+                    font-size: 14px;
+                }
+
+                .bg_blue {
+                    background-color: rgb(0, 70, 130);
+                    color: $white-color;
+                }
+
+                .bg_purple {
+                    background-color: rgb(67, 5, 5);
+                    color: $white-color;
+                }
+
+                .bg_gold {
+                    background-color: gold;
+                    color: $white-color;
+                }
+
+                .bg_red {
+                    background-color: red;
+                    color: $white-color;
+                }
+
+
+
+                .team_name {
+                    width: 302px;
+                }
+
+                .team_logo {
+                    margin-left: 22px;
+                    width: 30px;
+                    height: auto;
+                }
+
+                .draws {
+                    padding-left: 4px;
+                }
+
+                .losts {
+                    margin-left: -5px;
+                }
+
+                .goalDifference {
+                    padding-left: 13px;
+                    text-align: center;
+                    width: 50px;
+                }
+
+                .points {
+                    text-align: center;
+                    width: 50px;
+                }
+
+                .form {
+                    padding-left: 40px;
+                }
+
+            }
+
+            .underline_bettwen_standings {
+                width: 100%;
+                height: 1px;
+                background-color: $second-color;
+            }
+        }
+    }
+
+    .strikers_table {
+        .table_section {
+            p:nth-child(1) {
+                padding-right: 200px;
+            }
+
+            p:nth-child(2) {
+                margin-left: 5px;
+                padding-right: 240px;
+            }
+
+            p:nth-child(3) {
+                font-weight: bold;
+            }
+        }
+
+        .standing_info {
+            .table_container {
+                .player_name {
+                    margin-left: 30px;
+                    width: 280px;
+                }
+
+                .team_logo {
+                    img {
+                        width: 25px;
+                        height: auto;
+                        margin: 5px 5px;
+                    }
+                }
+
+                .team_name {
+                    width: 290px;
+                    padding-left: 5px;
+                }
+
+                .player_goals {
+                    width: 18px;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+
+    .heading_teams {
+        margin-top: 95px;
+        height: 70px;
+        border-radius: 20px 20px 0 0;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background-color: $white-color;
+
+        .heading_container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .heading_name {
+                font-size: 25px;
+                font-weight: bold;
+                text-align: center;
+            }
+
+            .heading_season {
+                font-size: 15px;
+                color: grey;
+            }
+        }
+    }
+
+    .teams_list {
+        display: flex;
+
+        a {
+            font-size: 20px;
+            color: #111;
+            text-decoration: none;
+        }
+
+        a:hover .team_list_name {
+            background-color: #8a8989;
+        }
+
+        .team_list_name {
+            background-color: $second-color;
+            margin: 10px 0px 0px 5px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 70px;
+            border-radius: 50px;
+            transition: 2s;
+
+        }
+    }
+
+}
+
+@media (max-width: 576px) {
+    .results {
+
+        .heading {
+            height: 100px;
+            width: 380px;
+
+            img {
+                width: 150px;
+            }
+        }
+
+        .links-section {
+            width: 380px;
+
+            a {
+                margin: 7px 10px 7px;
+                font-size: 9px;
+            }
+
+        }
+
+        .section {
+            width: 380px;
+
+            .matchday-info {
+                width: 350px;
+            }
+
+            .matches_list {
+                .match {
+                    width: 68%;
+
+                    .team_container {
+
+                        .team {
+                            display: flex;
+                            align-items: center;
+                            width: 100%;
+
+                            .team-name {
+                                font-size: 15px;
+                                margin: 5px 0px;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+
+        .table_section {
+            height: 30px;
+            width: 183%;
+
+            p {
+                padding-left: 15px;
+                font-size: 10px;
+            }
+
+            p:nth-child(2) {
+                padding-right: 10px;
+            }
+
+            p:nth-of-type(3) {
+                margin-left: 31px;
+            }
+
+            p:nth-of-type(8) {
+                padding-left: 15px;
+            }
+        }
+
+        .table_info {
+            font-size: 10px;
+
+            .standing_info {
+                div:nth-of-type(n+4):nth-of-type(-n+6) {
+                    width: 0px;
+                }
+
+                div:nth-of-type(4) {
+                    padding-left: 0px;
+                }
+
+                .table_container {
+                    width: 355px;
+
+                    .position {
+                        margin-left: 16px;
+                        width: 15px;
+                        height: 15px;
+                        font-size: 11px;
+                    }
+
+                    .team_name {
+                        width: 300px;
+                    }
+
+                    .team_logo {
+                        margin-left: 15px;
+                        width: 20px;
+                    }
+
+                    .wins {
+                        margin-left: 11px;
+                    }
+
+                    .draws {
+                        margin-left: 20px;
+                    }
+
+                    .losts {
+                        margin-left: 19px;
+                    }
+
+                    .bilans {
+                        padding-left: 14px;
+                    }
+
+                    .goalDifference {
+                        padding-left: 30px;
+                        margin-left: -21px;
+                    }
+
+                    .points {
+                        padding-left: 20px;
+
+                    }
+
+                    .form {
+                        padding-left: 40px;
+                    }
+
+                }
+            }
+        }
+
+        .strikers_table {
+            .table_section {
+                width: 125%;
+
+                p:nth-child(1) {
+                    padding-right: 70px;
+                }
+
+                p:nth-child(2) {
+                    padding-right: 120px;
+                }
+            }
+
+            .standing_info {
+                .table_container {
+                    .player_name {
+                        margin-left: 15px;
+                        width: 120px;
+                    }
+
+                    .team_name {
+                        width: 50px;
+                        padding-left: 5px;
+                    }
+
+                    .player_goals {
+                        margin-left: -117px;
+                        padding-right: 20px;
+                        width: 18px;
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+
+
+
+
+@media (max-width: 768px) {
+    .results {
+
+        .heading {
+            height: 100px;
+            width: 530px;
+
+            img {
+                width: 150px;
+            }
+        }
+
+        .links-section {
+            width: 530px;
+
+            a {
+                margin: 7px 15px 7px;
+                font-size: 13px;
+            }
+        }
+
+        .section {
+            width: 530px;
+
+            .matchday-info {
+                width: 500px;
+            }
+
+            .matches_list {
+                .match {
+                    width: 80%;
+
+                    .team_container {
+                        .team {
+                            width: 125%;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        .table_section {
+            height: 30px;
+            width: 135%;
+
+            p {
+                padding-left: 15px;
+                font-size: 10px;
+            }
+
+            p:nth-child(2) {
+                margin-left: 15px;
+            }
+
+            p:nth-of-type(3) {
+                margin-left: -25px;
+            }
+
+            p:nth-of-type(8) {
+                padding-left: 24px;
+            }
+
+            p:nth-of-type(9) {
+                padding-left: 34px;
+            }
+
+            p:nth-of-type(10) {
+                padding-left: 45px;
+            }
+        }
+
+        .table_info {
+            .standing_info {
+                div:nth-of-type(n+4):nth-of-type(-n+6) {
+                    width: 0px;
+                }
+
+                div:nth-of-type(4) {
+                    padding-left: 0px;
+                }
+
+                .table_container {
+                    width: 515px;
+                    font-size: 12px;
+
+                    .position {
+                        margin-left: 7px;
+                        width: 23px;
+                        height: 20px;
+                        font-size: 14px;
+                    }
+
+                    .team_name {
+                        width: 252px;
+                    }
+
+                    .team_logo {
+                        margin-left: 15px;
+                        width: 30px;
+                    }
+
+                    .wins {
+                        margin-left: 11px;
+                    }
+
+                    .draws {
+                        margin-left: 20px;
+                    }
+
+                    .losts {
+                        margin-left: 19px;
+                    }
+
+                    .bilans {
+                        padding-left: 14px;
+                    }
+
+                    .goalDifference {
+                        padding-left: 30px;
+                        margin-left: -21px;
+                    }
+
+                    .points {
+                        padding-left: 20px;
+
+                    }
+
+                    .form {
+                        padding-left: 40px;
+                    }
+
+                }
+            }
+        }
+
+        .strikers_table {
+            .table_section {
+                width: 90%;
+
+                p:nth-child(1) {
+                    padding-right: 70px;
+                }
+
+                p:nth-child(2) {
+                    padding-right: 120px;
+                }
+            }
+
+            .standing_info {
+                .table_container {
+                    .player_name {
+                        margin-left: 15px;
+                        width: 120px;
+                    }
+
+                    .team_name {
+                        width: 50px;
+                        padding-left: 5px;
+                    }
+
+                    .player_goals {
+                        margin-left: -117px;
+                        padding-right: 20px;
+                        width: 18px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 1400px) {
+    .results {
+        .heading {
+            height: 100px;
+            width: 640px;
+
+            img {
+                width: 150px;
+            }
+        }
+
+        .links-section {
+            width: 640px;
+
+            a {
+                margin: 7px 30px 7px;
+            }
+        }
+
+        .section {
+            width: 640px;
+
+            .matchday-info {
+                width: 600px;
+            }
+
+            .matches_list {
+                .match {
+                    width: 80%;
+                }
+
+            }
+        }
+
+        .table_section {
+            height: 30px;
+            width: 83%;
+            margin-left: 50px;
+
+            p {
+                padding-left: 15px;
+                font-size: 10px;
+            }
+
+            p:nth-child(2) {
+                margin-left: 15px;
+            }
+
+            p:nth-of-type(3) {
+                margin-left: -25px;
+            }
+
+            p:nth-of-type(8) {
+                padding-left: 24px;
+            }
+
+            p:nth-of-type(9) {
+                padding-left: 34px;
+            }
+
+            p:nth-of-type(10) {
+                padding-left: 45px;
+            }
+        }
+
+        .table_info {
+            .standing_info {
+                margin-left: 50px;
+                width: 83%;
+
+                div:nth-of-type(n+4):nth-of-type(-n+6) {
+                    width: 0px;
+                }
+
+                div:nth-of-type(4) {
+                    padding-left: 0px;
+                }
+
+                .table_container {
+                    width: 515px;
+                    font-size: 12px;
+
+                    .position {
+                        margin-left: 7px;
+                        width: 23px;
+                        height: 20px;
+                        font-size: 14px;
+                    }
+
+                    .team_name {
+                        width: 252px;
+                    }
+
+                    .team_logo {
+                        margin-left: 15px;
+                        width: 30px;
+                    }
+
+                    .wins {
+                        margin-left: 11px;
+                    }
+
+                    .draws {
+                        margin-left: 20px;
+                    }
+
+                    .losts {
+                        margin-left: 19px;
+                    }
+
+                    .bilans {
+                        padding-left: 14px;
+                    }
+
+                    .goalDifference {
+                        padding-left: 30px;
+                        margin-left: -21px;
+                    }
+
+                    .points {
+                        padding-left: 20px;
+
+                    }
+
+                    .form {
+                        padding-left: 40px;
+                    }
+
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,105 @@
+.team .team_date {
+  margin: 100px 0 0 15px;
+  height: 120px;
+  display: flex;
+  background-color: white;
+  border-radius: 15px 15px 0 0;
+}
+.team .team_date p {
+  font-size: 15px;
+  margin: 2px 0 0 5px;
+  color: #555e61;
+  font-weight: bold;
+}
+.team .team_date img {
+  margin: 10px 0 0 15px;
+  width: 100px;
+  border-radius: 10px;
+  border: 1px solid #d5d5d5;
+}
+.team .team_date .heading_name h1 {
+  margin: 12px 0 8px 15px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.team .team_date .heading_position {
+  display: flex;
+  margin-left: 15px;
+}
+.team .team_date .heading_stadion {
+  display: flex;
+  margin-left: 15px;
+}
+.team .team_date .heading_size {
+  display: flex;
+  margin-left: 15px;
+}
+.team .section_stats {
+  background-color: white;
+  margin: 10px 0 0 15px;
+}
+.team .section_stats .team_stats th {
+  text-align: left;
+  font-weight: 400;
+}
+.team .section_stats .team_stats td {
+  text-align: right;
+  font-weight: bold;
+  font-size: 20px;
+}
+.team .section_stats .team_stats td p {
+  margin-right: 15px;
+}
+.team .section_squad .title {
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.team .section_squad .team_players {
+  margin-left: 15px;
+  background-color: white;
+}
+.team .section_squad .team_players .position {
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.team .squad_section {
+  background-color: #eee;
+  display: inline-flex;
+  height: 25px;
+  letter-spacing: 1px;
+}
+.team .squad_section p {
+  text-align: center;
+  margin-top: 5px;
+  width: 50px;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+}
+.team .squad_section p:nth-child(2) {
+  padding-right: 340px;
+}
+.team .players_section td {
+  width: 50px;
+}
+.team .players_section div {
+  margin-top: 20px;
+}
+.team .players_section p {
+  margin-top: 12px;
+  font-size: 12px;
+  text-align: center;
+}
+.team .players_section .player_name {
+  padding-right: 330px;
+  margin-left: -6px;
+  width: 200px;
+}
+.team .players_section .coach {
+  font-weight: bold;
+  font-size: 15px;
+}/*# sourceMappingURL=teams.css.map */

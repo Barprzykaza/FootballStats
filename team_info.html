@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informacje Drużyny</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="https://kit.fontawesome.com/baf9ff804b.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/results.css">
+    <link rel="stylesheet" href="./css/teams.css">
+
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navId">
+    <nav class="navbar navbar-expand-lg position-fixed top-0 w-100 py-3" id="navId">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Football<span class="red-text">Stats</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto bs-white">
+                    <a class="nav-link" href="results.html">Dziś grają</a>
+                    <div class="dropdown">
+                        <button class="btn dropdown-toggle text-white" type="button" id="dropdownMenuButton"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Ligi
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <li><a class="dropdown-item" href="./leauges/pl/premierleauge.html">Premier League</a></li>
+                            <li><a class="dropdown-item" href="./leauges/bundesliga/bundesliga.html">Bundesliga</a></li>
+                            <li><a class="dropdown-item" href="./leauges/laliga/laliga.html">La liga</a></li>
+                            <li><a class="dropdown-item" href="./leauges/seriea/seriea.html">Serie a</a></li>
+                            <li><a class="dropdown-item" href="./leauges/ligue/ligue.html">Ligue 1</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn dropdown-toggle text-white" type="button" id="dropdownMenuButton"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Drużyny
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <li><a class="dropdown-item" href="./leauges/pl/pl_teams.html">Premier League</a></li>
+                            <li><a class="dropdown-item" href="./leauges/bundesliga/b1_teams.html">Bundesliga</a></li>
+                            <li><a class="dropdown-item" href="./leauges/laliga/pe_teams.html">La liga</a></li>
+                            <li><a class="dropdown-item" href="./leauges/seriea/se_teams.html">Serie a</a></li>
+                            <li><a class="dropdown-item" href="./leauges/ligue/fl1_teams.html">Ligue 1</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <section class="team results bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="leauges-nav col-12 top-0">
+                        <h5>Top 5</h5>
+                        <a class="nav-link" href="./leauges/pl/pl_teams.html">
+                            <p><img src="./img/nations-flag/england.jpg" alt="flaga anglii">Premier League</p>
+                        </a>
+                        <a class="nav-link" href="./leauges/laliga/laliga.html">
+                            <p><img src="./img/nations-flag/spain.png" alt="flaga hiszpanii">La Liga</p>
+                        </a>
+                        <a class="nav-link" href="./leauges/bundesliga/bundesliga.html">
+                            <p><img src="./img/nations-flag/germany.jpg" alt="flaga nimiec">Bundesliga</p>
+                        </a>
+                        <a class="nav-link" href="./leauges/seriea/seriea.html">
+                            <p><img src="./img/nations-flag/italy.jpg" alt="flaga włoch">Serie A</p>
+                        </a>
+                        <a class="nav-link" href="./leauges/ligue/ligue.html">
+                            <p><img src="./img/nations-flag/france.png" alt="flaga francjii">Ligue 1</p>
+                        </a>
+                        <hr>
+                    </div>
+                    <div class="col-7">
+                        <div class="team_date">
+                            <div class="heading_picture"><img id="team_logo" src="" alt="Logo drużyny"></div>
+                            <div class="heading_date">
+                                <div class="heading_name">
+                                    <h1 id="team_name"></h1>
+                                </div>
+                                <div class="heading_position">Pozycja: <p id="team_position"></p>
+                                </div>
+                                <div class="heading_stadion">Stadion: <p id="team_stadion"> </p>
+                                </div>
+                                <div class="heading_size">Pojemność: <p id="team_size"> </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table_choice col-12 mt-2 text-center ">
+                            <button type="button" class="btn btn-secondary all_stats mt-2">Ogółem</button>
+                            <button type="button" class="btn btn-secondary home_stats mt-2">U siebie</button>
+                            <button type="button" class="btn btn-secondary away_stats mt-2">Na wyjezdzie</button>
+                        </div>
+                        <div id="all_stats" class="all_stats col-12">
+                            <div class="section_stats">
+                                <div class="games text-center">
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">M</th>
+                                                <th scope="col">W</th>
+                                                <th scope="col">R</th>
+                                                <th scope="col">P</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">
+                                                    <p id="team_games"></p>
+                                                </th>
+                                                <td>
+                                                    <p id="team_wins" class="text-success"></p>
+                                                </td>
+                                                <td>
+                                                    <p id="team_draws" class="text-warning"></p>
+                                                </td>
+                                                <td>
+                                                    <p id="team_loss" class="text-danger">
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="team_stats">
+                                    <table class="table table-hover">
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">Śr. Zdobytych bramek na mecz</th>
+                                                <td>
+                                                    <p id="team_goals" class="fs-5 me-3"></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Śr. oczekiwanych bramek na mecz</th>
+                                                <td class="text-end">
+                                                    <p id="team_exceptedGoals"></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Śr. bramek na mecz</th>
+                                                <td class="text-end">
+                                                    <p id="team_goalPerGame"></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Śr. straconych bramek na mecz</th>
+                                                <td class="text-end">
+                                                    <p id="team_lostGoals"></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Śr. strzałów</th>
+                                                <td class="text-end">
+                                                    <p id="team_shots"></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Śr. strzałów celnych</th>
+                                                <td class="text-end">
+                                                    <p id="team_shotsIn"></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Śr. posiadania piłki</th>
+                                                <td class="text-end">
+                                                    <p id="team_possession"></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Śr. celnych podań</th>
+                                                <td class="text-end">
+                                                    <p id="team_passes"></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Śr. faulii</th>
+                                                <td>
+                                                    <p id="team_fauls"></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Śr. zółtych kartek</th>
+                                                <td class="yellowCards_stats text-warning">
+                                                    <p id="team_yellowCards"></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Śr. czerwonych kartek</th>
+                                                <td class="redCards_stats text-danger">
+                                                    <p id="team_redCards"></p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                                <div class="both_teams">
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr class="text-center">
+                                                <th scope="col"></th>
+                                                <th scope="col">D</th>
+                                                <th scope="col">P</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">Śr. rzutów rożnych</th>
+                                                <td>
+                                                    <p id="team_corners" class="text-center"></p>
+                                                </td>
+                                                <td>
+                                                    <p id="team_cornersOpponent" class="text-center"></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Śr. spalonych</th>
+                                                <td class="text-center">
+                                                    <p id="team_offsides"></p>
+                                                </td>
+                                                <td class="text-center">
+                                                    <p id="team_offsidesOpponent"></p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div id="home_stats" class="home_stats col-12" style="display:none">
+                            <div class="section_stats">
+                                <div class="games text-center">
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">M</th>
+                                                <th scope="col">W</th>
+                                                <th scope="col">R</th>
+                                                <th scope="col">P</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">
+                                                    <p id="team_gamesHome"></p>
+                                                </th>
+                                                <td>
+                                                    <p id="team_winsHome" class="text-success"></p>
+                                                </td>
+                                                <td>
+                                                    <p id="team_drawsHome" class="text-warning"></p>
+                                                </td>
+                                                <td>
+                                                    <p id="team_lossHome" class="text-danger">
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="team_stats">
+                                    <table class="table table-hover">
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">Śr. Zdobytych bramek na mecz</th>
+                                                <td>
+                                                    <p id="team_goalsHome" class="fs-5 me-3"></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Śr. oczekiwanych bramek na mecz</th>
+                                                <td class="text-end">
+                                                    <p id="team_exceptedGoalsHome"></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Śr. bramek na mecz</th>
+                                                <td class="text-end">
+                                                    <p id="team_goalpergameHome"></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Śr. straconych bramek na mecz</th>
+                                                <td class="text-end">
+                                                    <p id="team_lostGoalsHome"></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Śr. strzałów</th>
+                                                <td class="text-end">
+                                                    <p id="team_shotsHome"></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Śr. strzałów celnych</th>
+                                                <td class="text-end">
+                                                    <p id="team_shotsInHome"></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Śr. posiadania piłki</th>
+                                                <td class="text-end">
+                                                    <p id="team_possessionHome"></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Śr. celnych podań</th>
+                                                <td class="text-end">
+                                                    <p id="team_passesHome"></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Śr. faulii</th>
+                                                <td>
+                                                    <p id="team_faulsHome"></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Śr. zółtych kartek</th>
+                                                <td class="yellowCards_stats text-warning">
+                                                    <p id="team_yellowCardsHome"></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Śr. czerwonych kartek</th>
+                                                <td class="redCards_stats text-danger">
+                                                    <p id="team_redCardsHome"></p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                                <div class="both_teams">
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr class="text-center">
+                                                <th scope="col"></th>
+                                                <th scope="col">D</th>
+                                                <th scope="col">P</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">Śr. rzutów rożnych</th>
+                                                <td>
+                                                    <p id="team_cornersHome" class="text-center"></p>
+                                                </td>
+                                                <td>
+                                                    <p id="team_cornersOpponentHome" class="text-center"></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Śr. spalonych</th>
+                                                <td class="text-center">
+                                                    <p id="team_offsidesHome"></p>
+                                                </td>
+                                                <td class="text-center">
+                                                    <p id="team_offsidesOpponentHome"></p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="away_stats" class="away_stats col-12" style="display:none">
+                            <div class="section_stats">
+                                <div class="games text-center">
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">M</th>
+                                                <th scope="col">W</th>
+                                                <th scope="col">R</th>
+                                                <th scope="col">P</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">
+                                                    <p id="team_gamesAway"></p>
+                                                </th>
+                                                <td>
+                                                    <p id="team_winsAway" class="text-success"></p>
+                                                </td>
+                                                <td>
+                                                    <p id="team_drawsAway" class="text-warning"></p>
+                                                </td>
+                                                <td>
+                                                    <p id="team_lossAway" class="text-danger">
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="team_stats">
+                                    <table class="table table-hover">
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">Śr. Zdobytych bramek na mecz</th>
+                                                <td>
+                                                    <p id="team_goalsAway" class="fs-5 me-3"></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Śr. oczekiwanych bramek na mecz</th>
+                                                <td class="text-end">
+                                                    <p id="team_exceptedGoalsAway"></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Śr. bramek na mecz</th>
+                                                <td class="text-end">
+                                                    <p id="team_goalpergameAway"></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Śr. straconych bramek na mecz</th>
+                                                <td class="text-end">
+                                                    <p id="team_lostGoalsAway"></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Śr. strzałów</th>
+                                                <td class="text-end">
+                                                    <p id="team_shotsAway"></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Śr. strzałów celnych</th>
+                                                <td class="text-end">
+                                                    <p id="team_shotsInAway"></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Śr. posiadania piłki</th>
+                                                <td class="text-end">
+                                                    <p id="team_possessionAway"></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Śr. celnych podań</th>
+                                                <td class="text-end">
+                                                    <p id="team_passesAway"></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Śr. faulii</th>
+                                                <td>
+                                                    <p id="team_faulsAway"></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Śr. zółtych kartek</th>
+                                                <td class="yellowCards_stats text-warning">
+                                                    <p id="team_yellowCardsAway"></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Śr. czerwonych kartek</th>
+                                                <td class="redCards_stats text-danger">
+                                                    <p id="team_redCardsAway"></p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                                <div class="both_teams">
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr class="text-center">
+                                                <th scope="col"></th>
+                                                <th scope="col">D</th>
+                                                <th scope="col">P</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">Śr. rzutów rożnych</th>
+                                                <td>
+                                                    <p id="team_cornersAway" class="text-center"></p>
+                                                </td>
+                                                <td>
+                                                    <p id="team_cornersOpponentAway" class="text-center"></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Śr. spalonych</th>
+                                                <td class="text-center">
+                                                    <p id="team_offsidesAway"></p>
+                                                </td>
+                                                <td class="text-center">
+                                                    <p id="team_offsidesOpponentAway"></p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="section_squad mt-4">
+                            <div class="title text-center">
+                                Skład
+                                <div class="underline"></div>
+                            </div>
+                            <div class="team_players">
+                                <div class="position">Bramkarze</div>
+                                <div class="squad_section d-flex col-12">
+                                    <p>#</p>
+                                    <p>Nazwisko</p>
+                                    <p>Wiek</p>
+                                    <p title="rozegrane mecze"><i class="fa-solid fa-shirt"></i></p>
+                                    <p title="rozegrane minuty">MIN</p>
+                                    <p title="zdobyte bramki"><i class="fa-regular fa-futbol"></i></p>
+                                    <p title="zdobyte asysty">A</p>
+                                    <p title="żółte kartki">ŻK</p>
+                                    <p title="czerowne kartki">CK</p>
+                                </div>
+                                <table class="table table-striped">
+                                    <div id="goalkeepersContainer"></div>
+                                </table>
+
+                                <div class="position">Obrońcy</div>
+                                <div class="squad_section d-flex col-12">
+                                    <p>#</p>
+                                    <p>Nazwisko</p>
+                                    <p>Wiek</p>
+                                    <p title="rozegrane mecze"><i class="fa-solid fa-shirt"></i></p>
+                                    <p title="rozegrane minuty">MIN</p>
+                                    <p title="zdobyte bramki"><i class="fa-regular fa-futbol"></i></p>
+                                    <p title="zdobyte asysty">A</p>
+                                    <p title="żółte kartki">ŻK</p>
+                                    <p title="czerowne kartki">CK</p>
+                                </div>
+                                <table class="table table-striped">
+                                    <div id="deffendersContainer"></div>
+                                </table>
+
+                                <div class="position">Pomocnicy</div>
+                                <div class="squad_section d-flex col-12">
+                                    <p>#</p>
+                                    <p>Nazwisko</p>
+                                    <p>Wiek</p>
+                                    <p title="rozegrane mecze"><i class="fa-solid fa-shirt"></i></p>
+                                    <p title="rozegrane minuty">MIN</p>
+                                    <p title="zdobyte bramki"><i class="fa-regular fa-futbol"></i></p>
+                                    <p title="zdobyte asysty">A</p>
+                                    <p title="żółte kartki">ŻK</p>
+                                    <p title="czerowne kartki">CK</p>
+                                </div>
+                                <table class="table table-striped">
+                                    <div id="midlanersContainer"></div>
+                                </table>
+
+                                <div class="position">Napastnicy</div>
+                                <div class="squad_section d-flex col-12">
+                                    <p>#</p>
+                                    <p>Nazwisko</p>
+                                    <p>Wiek</p>
+                                    <p title="rozegrane mecze"><i class="fa-solid fa-shirt"></i></p>
+                                    <p title="rozegrane minuty">MIN</p>
+                                    <p title="zdobyte bramki"><i class="fa-regular fa-futbol"></i></p>
+                                    <p title="zdobyte asysty">A</p>
+                                    <p title="żółte kartki">ŻK</p>
+                                    <p title="czerowne kartki">CK</p>
+                                </div>
+                                <table class="table table-striped">
+                                    <div id="attackersContainer"></div>
+                                </table>
+                                <div class="position">Trener</div>
+                                <div class="squad_section d-flex col-12">
+                                    <p>#</p>
+                                    <p>Nazwisko</p>
+                                </div>
+                                <table class="table table-striped">
+                                    <div class="coach mt-2 ms-5 fw-bold" id="team_coach"></div>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            </div>
+
+            </div>
+            </div>
+            <footer class="bg-dark text-light py-4 mt-5 text-center">
+                <p class="mb-0"> &copy; FootballStats</p>
+            </footer>
+        </section>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script src="./js/team_stats.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FootballStats</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="https://kit.fontawesome.com/baf9ff804b.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navId">
+    <nav class="navbar navbar-expand-lg position-fixed top-0 w-100 py-3" id="navId">
+        <div class="container">
+            <a class="navbar-brand" href="#">Football<span class="red-text">Stats</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto bs-white">
+                    <a class="nav-link active" href="#news">Aktualności</a>
+                    <a class="nav-link" href="#leaders">Liderzy</a>
+                    <a class="nav-link" href="#strikers">Strzelcy</a>
+                    <a class="nav-link" href="results.html">Dziś grają</a>
+                    <div class="dropdown">
+                        <button class="btn dropdown-toggle text-white" type="button" id="dropdownMenuButton"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Ligi
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <li><a class="dropdown-item" href="./leauges/pl/premierleauge.html">Premier League</a></li>
+                            <li><a class="dropdown-item" href="./leauges/bundesliga/bundesliga.html">Bundesliga</a></li>
+                            <li><a class="dropdown-item" href="./leauges/laliga/laliga.html">La liga</a></li>
+                            <li><a class="dropdown-item" href="./leauges/seriea/seriea.html">Serie a</a></li>
+                            <li><a class="dropdown-item" href="./leauges/ligue/ligue.html">Ligue 1</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn dropdown-toggle text-white" type="button" id="dropdownMenuButton"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Drużyny
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <li><a class="dropdown-item" href="./leauges/pl/pl_teams.html">Premier League</a></li>
+                            <li><a class="dropdown-item" href="./leauges/bundesliga/b1_teams.html">Bundesliga</a></li>
+                            <li><a class="dropdown-item" href="./leauges/laliga/pe_teams.html">La liga</a></li>
+                            <li><a class="dropdown-item" href="./leauges/seriea/se_teams.html">Serie a</a></li>
+                            <li><a class="dropdown-item" href="./leauges/ligue/fl1_teams.html">Ligue 1</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    </nav>
+    <main>
+        <section id="news" class="news bg-light py-5">
+            <h2 class="section-title">Aktualności</h2>
+            <div class="underline"></div>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 m-5">
+                <div class="col">
+                    <div class="card">
+                        <img src="./img/news/news.jpg" class="card-img-top" alt="boisko">
+                        <div class="card-body">
+                            <h5 class="card-title">Finał superpucharu Włoch</h5>
+                            <p class="card-text">Derby medionalu w finale! Inter Mediolan po dwubramkowej przewadze
+                                przegrywa z Ac Milanem 2:3</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-body-secondary">Data artykułu: 06.01.2025</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card">
+                        <img src="./img/news/england-cup.jpg" class="card-img-top" alt="boisko">
+                        <div class="card-body">
+                            <h5 class="card-title">Półfinał Pucharu Anglii</h5>
+                            <p class="card-text">Już dzisiaj tj. 08.01.2024 Tottenham podejmie u siebie Liverpool w
+                                pucharze Anglii.</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-body-secondary">Data artykułu: 08.01.2025</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card">
+                        <img src="./img/news/robert-lewandowski.jpg" class="card-img-top" alt="boisko">
+                        <div class="card-body">
+                            <h5 class="card-title">Lewandowski razy dwa!</h5>
+                            <p class="card-text">W poniedziałkowym starciu FC Barcelony z drugo ligowym Barbastro (4:0)
+                                Robert Lewandowski zaliczył dwa gole </p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-body-secondary">Data artykułu: 06.01.2025</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card">
+                        <img src="./img/news/Real-Madrid-Logo.png" class="card-img-top" alt="boisko">
+                        <div class="card-body">
+                            <h5 class="card-title">Real madryt dementuje plotki!</h5>
+                            <p class="card-text">Od dłuższego czasu zawodnik angielskiego Liverpoolu, Mohamed Salah jest
+                                łączony z Realem Madryt. Hiszpański klub zabrał zdanie.</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-body-secondary">Data artykułu: 06.01.2025</small>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            </div>
+        </section>
+        <section id="leaders" class="leaders bg-light py-1 bg-white">
+            <div class="container">
+                <h2 class="section-title">Aktualni liderzy</h2>
+                <div class="underline"></div>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-xl-5">
+                    <div class="team-card">
+                        <div class="league-flag">
+                            <img src="./img/leagues/Premier_League.jpg" class="card-img-top" alt="premier-league-logo">
+                        </div>
+                        <img src="./img/premier-league/liverpool.jpg" class="card-img-top team-logo"
+                            alt="liverpool-logo">
+                        <div class="team-body text-center">
+                            <h5 class="team-title">Liverpool F.C</h5>
+                            <hr>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <div class="league-flag">
+                            <img src="./img/leagues/laliga.jpg" class="card-img-top" alt="premier-league-logo">
+                        </div>
+                        <img src="./img/la-liga/clubs/realmadryt.jpg" class="card-img-top team-logo"
+                            alt="realmadryt-logo">
+                        <div class="team-body text-center">
+                            <h5 class="team-title">Real Madryt</h5>
+                            <hr>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <div class="league-flag">
+                            <img src="./img/leagues/bundesliga.jpg" class="card-img-top" alt="premier-league-logo">
+                        </div>
+                        <img src="./img/bundesliga/bayern2.png" class="card-img-top team-logo" alt="bayern-logo">
+                        <div class="team-body text-center">
+                            <h5 class="team-title">Bayern</h5>
+                            <hr>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <div class="league-flag">
+                            <img src="./img/leagues/serie-a.png" class="card-img-top" alt="premier-league-logo">
+                        </div>
+                        <img src="./img/seria-a/napoli.png" class="card-img-top team-logo" alt="napoli-logo">
+                        <div class="team-body text-center">
+                            <h5 class="team-title">SSC Napoli</h5>
+                            <hr>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <div class="league-flag">
+                            <img src="./img/leagues/ligue1.png" class="card-img-top" alt="ligue1-logo">
+                        </div>
+                        <img src="./img/ligue-1/clubs/psg.jpg" class="card-img-top team-logo" alt="psgl-logo">
+                        <div class="team-body text-center">
+                            <h5 class="team-title">PSG</h5>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="strikers" class="strikers bg-light py-1">
+            <div class="container">
+                <h2 class="section-title">Najlepsi strzelcy</h2>
+
+                <div class="underline"></div>
+                <div class="button-container">
+                    <button type="button" class="btn btn-secondary strikers-league">Ligi</button>
+                    <button type="button" class="btn btn-secondary strikers-all">Ogólnie</button>
+                </div>
+                <div id="strikers-league" class="strikers-league-section">
+
+                    <div class="row align-items-end league-bg premier-leauge-bg ">
+                        <div class="col striker-hero">
+                            <div class="striker-img">
+                                <img src="./img/premier-league/players/salah.png" alt="Mohamed Salah face">
+                                <p>Mohamed Salah</p>
+                            </div>
+                        </div>
+                        <div class="col striker-hero striker-date">
+                            <div class="striker-nation">
+                                <img src="./img/nations-flag/egypt.png" alt="egypt-flag">
+                            </div>
+                        </div>
+                        <div class="col striker-hero">
+                            <div class="striker-goals">
+                                <p>18<i class="fa-regular fa-futbol"></i></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row align-items-end league-bg laliga-bg">
+                        <div class="col striker-hero">
+                            <div class="striker-img">
+                                <img src="./img/la-liga/players/lewandowski.png" alt="Robert Lewandowski face">
+                                <p>Robert Lewandowski</p>
+                            </div>
+                        </div>
+                        <div class="col striker-hero striker-date">
+                            <div class="striker-nation">
+                                <img src="./img/nations-flag/poland.png" alt="poland-flag">
+                            </div>
+                        </div>
+                        <div class="col striker-hero">
+                            <div class="striker-goals">
+                                <p>16<i class="fa-regular fa-futbol"></i></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row align-items-end league-bg bundesliga-bg">
+                        <div class="col striker-hero">
+                            <div class="striker-img">
+                                <img src="./img/bundesliga/players/kane.png" alt="Harry Kane face">
+                                <p>Harry Kane</p>
+                            </div>
+                        </div>
+                        <div class="col striker-hero striker-date">
+                            <div class="striker-nation">
+                                <img src="./img/nations-flag/england.jpg" alt="flaga anglii">
+                            </div>
+                        </div>
+                        <div class="col striker-hero">
+                            <div class="striker-goals">
+                                <p>14<i class="fa-regular fa-futbol"></i></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row align-items-end league-bg serie-a-bg">
+                        <div class="col striker-hero">
+                            <div class="striker-img">
+                                <img src="./img/seria-a/players/mateo-retegui.png" alt="Mateo Reteguliface">
+                                <p>Mateo Reteguli</p>
+                            </div>
+                        </div>
+                        <div class="col striker-hero striker-date">
+                            <div class="striker-nation">
+                                <img src="./img/nations-flag/italy.jpg" alt="flaga włoch">
+                            </div>
+                        </div>
+                        <div class="col striker-hero">
+                            <div class="striker-goals">
+                                <p>12<i class="fa-regular fa-futbol"></i></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row align-items-end league-bg ligue1-bg">
+                        <div class="col striker-hero">
+                            <div class="striker-img">
+                                <img src="./img/ligue-1/players/j.david.png" alt="Jonathan David face">
+                                <p>Jonathan David</p>
+                            </div>
+                        </div>
+                        <div class="col striker-hero striker-date">
+                            <div class="striker-nation">
+                                <img src="./img/nations-flag/kanada.png" alt="flaga kanady">
+                            </div>
+                        </div>
+                        <div class="col striker-hero">
+                            <div class="striker-goals">
+                                <p>11<i class="fa-regular fa-futbol"></i></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="strikers-all" class="strikers-all-section" style="display: none;">
+                    <div class="row align-items-end league-bg premier-leauge-bg ">
+                        <div class="col striker-hero">
+                            <div class="striker-img">
+                                <img src="./img/premier-league/players/salah.png" alt="Mohamed Salah face">
+                                <p>Mohamed Salah</p>
+                            </div>
+                        </div>
+                        <div class="col striker-hero striker-date">
+                            <div class="striker-nation">
+                                <img src="./img/nations-flag/egypt.png" alt="egypt-flag">
+                            </div>
+                        </div>
+                        <div class="col striker-hero">
+                            <div class="striker-goals">
+                                <p>18<i class="fa-regular fa-futbol"></i></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row align-items-end league-bg laliga-bg">
+                        <div class="col striker-hero">
+                            <div class="striker-img">
+                                <img src="./img/la-liga/players/lewandowski.png" alt="Robert Lewandowski face">
+                                <p>Robert Lewandowski</p>
+                            </div>
+                        </div>
+                        <div class="col striker-hero striker-date">
+                            <div class="striker-nation">
+                                <img src="./img/nations-flag/poland.png" alt="poland-flag">
+                            </div>
+                        </div>
+                        <div class="col striker-hero">
+                            <div class="striker-goals">
+                                <p>16<i class="fa-regular fa-futbol"></i></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row align-items-end league-bg premier-leauge-bg ">
+                        <div class="col striker-hero">
+                            <div class="striker-img">
+                                <img src="./img/premier-league/players/halland.png" alt="Halland face">
+                                <p>Erling Halland</p>
+                            </div>
+                        </div>
+                        <div class="col striker-hero striker-date">
+                            <div class="striker-nation">
+                                <img src="./img/nations-flag/norway.png" alt="flaga norwegii">
+                            </div>
+                        </div>
+                        <div class="col striker-hero">
+                            <div class="striker-goals">
+                                <p>16<i class="fa-regular fa-futbol"></i></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row align-items-end league-bg bundesliga-bg">
+                        <div class="col striker-hero">
+                            <div class="striker-img">
+                                <img src="./img/bundesliga/players/kane.png" alt="Kane face">
+                                <p>Harry Kane</p>
+                            </div>
+                        </div>
+                        <div class="col striker-hero striker-date">
+                            <div class="striker-nation">
+                                <img src="./img/nations-flag/england.jpg" alt="flaga anglii">
+                            </div>
+                        </div>
+                        <div class="col striker-hero">
+                            <div class="striker-goals">
+                                <p>14<i class="fa-regular fa-futbol"></i></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row align-items-end league-bg bundesliga-bg">
+                        <div class="col striker-hero">
+                            <div class="striker-img">
+                                <img src="./img/bundesliga/players/Omar-Marmoush.png" alt="Omar Marmoush face">
+                                <p>Omar Marmoush</p>
+                            </div>
+                        </div>
+                        <div class="col striker-hero striker-date">
+                            <div class="striker-nation">
+                                <img src="./img/nations-flag/egypt.png" alt="flaga egiptu">
+                            </div>
+                        </div>
+                        <div class="col striker-hero">
+                            <div class="striker-goals">
+                                <p>13<i class="fa-regular fa-futbol"></i></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <footer class="bg-dark text-light py-4 mt-5 text-center">
+                <p class="mb-0"> &copy; FootballStats</p>
+            </footer>
+            </div>
+
+        </section>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    </main>
+
+</body>
+<script>
+    document.querySelector('.strikers-league').addEventListener('click', function () {
+    document.getElementById('strikers-all').style.display = 'none';
+
+    document.getElementById('strikers-league').style.display = 'block';
+
+    this.classList.add('active');
+    document.querySelector('.strikers-all').classList.remove('active');
+});
+
+document.querySelector('.strikers-all').addEventListener('click', function () {
+    document.getElementById('strikers-league').style.display = 'none';
+
+    document.getElementById('strikers-all').style.display = 'block';
+
+    this.classList.add('active');
+    document.querySelector('.strikers-league').classList.remove('active');
+});
+
+</script>
+
+</html>

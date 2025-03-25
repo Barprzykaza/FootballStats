@@ -1,0 +1,257 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-padding-top: 72px;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: white;
+}
+
+.red-text {
+  color: red;
+  font-size: 18px;
+}
+
+.section-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 50px;
+  margin-top: 50px;
+  color: white;
+  text-shadow: 0 0 5px rgb(0, 0, 0);
+}
+
+.underline {
+  margin: 0 auto 40px;
+  width: 200px;
+  height: 4px;
+  background-color: red;
+}
+
+nav {
+  z-index: 10;
+  text-transform: uppercase;
+  transition: background-color 0.6s;
+}
+
+.navbar {
+  background-color: rgb(17, 16, 16);
+}
+.navbar .navbar-brand {
+  color: white;
+  font-size: 25px;
+}
+.navbar .nav-link {
+  color: white;
+}
+.navbar .nav-link, .navbar .navbar-brand, .navbar .navbar-nav .nav-link.show, .navbar .fa-bars {
+  color: white;
+}
+.navbar .nav-link:focus, .navbar .nav-link:hover, .navbar .navbar-nav .nav-link.active {
+  color: red;
+}
+
+.news img {
+  height: 250px;
+  transition: opacity 0.5s ease;
+}
+.news .card {
+  height: 400px;
+  margin-top: 10px;
+}
+.news .card-title {
+  font-weight: bold;
+}
+.news .card-body {
+  overflow: hidden;
+}
+.news .card:hover .card-body {
+  opacity: 1;
+  margin-top: -250px;
+}
+.news .card:hover img {
+  opacity: 0;
+}
+
+.leaders .team-card .card-img-top {
+  width: 100%;
+  height: auto;
+  max-height: 150px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.leaders .team-card .team-logo {
+  margin-top: 10px;
+}
+.leaders .team-card .team-title {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 30px;
+}
+.leaders .team-card .team-body {
+  font-size: 25px;
+}
+
+.strikers .button-container {
+  text-align: center;
+}
+.strikers .striker-date {
+  margin-left: -350px;
+  margin-bottom: 64px;
+}
+.strikers .striker-hero {
+  position: relative;
+  z-index: 10;
+}
+.strikers .striker-hero .striker-img img {
+  height: 250px;
+  mix-blend-mode: multiply;
+  z-index: -10;
+}
+.strikers .striker-hero .striker-img .name {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 25px;
+  font-family: Garamond, serif;
+  width: 400px;
+}
+.strikers .striker-hero .striker-nation img {
+  max-width: 60px;
+  height: auto;
+}
+.strikers .striker-hero .striker-name {
+  width: 50px;
+  height: 250px;
+  writing-mode: vertical-rl;
+  font-size: 25px;
+}
+.strikers .striker-hero .striker-goals {
+  height: 250px;
+  width: 100px;
+  margin-bottom: 64px;
+  margin-left: auto;
+}
+.strikers .striker-hero .striker-goals p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 150px;
+  font-weight: bold;
+  margin-left: -200px;
+}
+.strikers .striker-hero .striker-goals i {
+  font-size: 50px;
+  margin-bottom: -60px;
+}
+.strikers .league-bg {
+  position: relative;
+  z-index: 0;
+}
+.strikers .league-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.5;
+  z-index: -1;
+}
+.strikers .premier-leauge-bg::before {
+  background-image: url(../img/leagues/Premier_League.jpg);
+}
+.strikers .laliga-bg::before {
+  background-image: url(../img/leagues/laliga.jpg);
+}
+.strikers .bundesliga-bg::before {
+  background-image: url(../img/leagues/bundesliga2.png);
+}
+.strikers .serie-a-bg::before {
+  background-image: url(../img/leagues/serie-a.png);
+}
+.strikers .ligue1-bg::before {
+  background-image: url(../img/leagues/ligue1-2.jpg);
+  background-size: 65%;
+}
+
+@media (max-width: 424px) {
+  .strikers .striker-hero .striker-img img {
+    height: 100px;
+  }
+  .strikers .striker-hero .striker-img p {
+    font-size: 10px;
+  }
+  .strikers .striker-hero .striker-nation {
+    display: none;
+  }
+  .strikers .striker-hero .striker-goals {
+    height: 50px;
+    margin-left: auto;
+  }
+  .strikers .striker-hero .striker-goals p {
+    height: 150%;
+    font-size: 50px;
+    margin-left: -160px;
+  }
+  .strikers .striker-hero .striker-goals i {
+    font-size: 25px;
+    margin-bottom: -20px;
+  }
+}
+@media (min-width: 424px) and (max-width: 576px) {
+  .strikers .striker-date {
+    margin-left: -310px;
+    margin-bottom: 48px;
+  }
+  .strikers .striker-hero .striker-img img {
+    height: 150px;
+  }
+  .strikers .striker-hero .striker-img p {
+    font-size: 15px;
+  }
+  .strikers .striker-hero .striker-nation img {
+    max-width: 40px;
+  }
+  .strikers .striker-hero .striker-goals {
+    height: 150px;
+    width: 100px;
+    margin-left: auto;
+  }
+  .strikers .striker-hero .striker-goals p {
+    height: 150%;
+    font-size: 100px;
+    font-weight: bold;
+    margin-left: -160px;
+  }
+  .strikers .striker-hero .striker-goals i {
+    font-size: 25px;
+    margin-bottom: -60px;
+  }
+}
+@media (max-width: 768px) {
+  .strikers .league-bg::before {
+    display: none;
+  }
+}
+@media (min-width: 576px) and (max-width: 1200px) {
+  .strikers .striker-date {
+    margin-left: -220px;
+    margin-bottom: 64px;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1400px) {
+  .strikers .striker-date {
+    margin-left: -280px;
+    margin-bottom: 64px;
+  }
+}/*# sourceMappingURL=style.css.map */

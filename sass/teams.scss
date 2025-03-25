@@ -1,0 +1,144 @@
+@use './colors' as *;
+
+.team {
+    .team_date {
+        margin: 100px 0 0 15px;
+        height: 120px;
+        display: flex;
+        background-color: $white-color;
+        border-radius: 15px 15px 0 0;
+
+        p {
+            font-size: 15px;
+            margin: 2px 0 0 5px;
+            color: #555e61;
+            font-weight: bold;
+        }
+
+        img {
+            margin: 10px 0 0 15px;
+            width: 100px;
+            border-radius: 10px;
+            border: 1px solid #d5d5d5;
+        }
+
+        .heading_name {
+            h1 {
+                margin: 12px 0 8px 15px;
+                font-size: 20px;
+                font-weight: bold;
+            }
+        }
+
+        .heading_position {
+            display: flex;
+            margin-left: 15px;
+
+        }
+
+        .heading_stadion {
+            display: flex;
+            margin-left: 15px;
+
+        }
+
+        .heading_size {
+            display: flex;
+            margin-left: 15px;
+        }
+    }
+
+    .section_stats {
+        background-color: $white-color;
+        margin: 10px 0 0 15px;
+
+        .team_stats {
+            th {
+                text-align: left;
+                font-weight: 400;
+            }
+
+            td {
+                text-align: right;
+                font-weight: bold;
+                font-size: 20px;
+
+                p {
+                    margin-right: 15px;
+                }
+            }
+        }
+
+    }
+
+    .section_squad {
+        .title {
+            font-size: 30px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .team_players {
+            margin-left: 15px;
+            background-color: $white-color;
+
+            .position {
+                padding: 10px;
+                font-size: 20px;
+                font-weight: bold;
+                letter-spacing: 1px;
+            }
+        }
+    }
+
+    .squad_section {
+
+        background-color: $second-color;
+        display: inline-flex;
+        height: 25px;
+        letter-spacing: 1px;
+
+        p {
+            text-align: center;
+            margin-top: 5px;
+            width: 50px;
+            text-transform: uppercase;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 12px;
+        }
+
+        p:nth-child(2) {
+            padding-right: 340px;
+        }
+
+
+    }
+
+    .players_section {
+        td {
+            width: 50px;
+        }
+
+        div {
+            margin-top: 20px;
+        }
+
+        p {
+            margin-top: 12px;
+            font-size: 12px;
+            text-align: center;
+        }
+
+        .player_name {
+            padding-right: 330px;
+            margin-left: -6px;
+            width: 200px;
+        }
+
+        .coach {
+            font-weight: bold;
+            font-size: 15px;
+        }
+    }
+}
