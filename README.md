@@ -1,5 +1,7 @@
 # FootballStats
-Fully responsive website, using free API to track matches and team statistics from TOP5 football leagues.
+A fully responsive website that uses a free API to track live match results and upcoming fixtures for the TOP 5 football leagues. 
+Additionally, a custom API was developed to display average team statistics, providing deeper insights into club performance. 
+The project ensures real-time updates and a user-friendly experience across all devices
 
 Project preview:
 
